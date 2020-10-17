@@ -5,7 +5,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/MatheusKael/Happy-Front-End">
+  <a href="https://github.com/MatheusKael/Happy-Front-End" styles="background: black">
     <img src="images/Logo.png" alt="Logo" width="240" height="74">
   </a>
 
