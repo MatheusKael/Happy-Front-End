@@ -6,7 +6,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/MatheusKael/Happy-Front-End">
-    <img src="images/Logo.png" alt="Logo" width="80" height="80">
+    <img src="images/Logo.png" alt="Logo" width="240" height="74">
   </a>
 
   <h3 align="center">Happy</h3>
@@ -151,7 +151,7 @@ Project Link: [https://github.com/MatheusKael/Happy-Front-End](https://github.co
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[stars-shield]: https://img.shields.io/github/stars/MatheusKael//Happy-Front-End.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/MatheusKael/Happy-Front-End.svg?style=flat-square
 [stars-url]: https://github.com/MatheusKael/Happy-Front-End/stargazers
 [issues-shield]: https://img.shields.io/github/issues/MatheusKael/Happy-Front-End.svg?style=flat-square
 [issues-url]: https://github.com/MatheusKael/Happy-Front-End/issues
