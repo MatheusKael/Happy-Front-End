@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiPlus } from "react-icons/fi";
-import LocalMark from "../images/local-mark.svg";
-import { Map } from "react-leaflet";
-import GoogleMapReact from "google-map-react";
-
+import { FiPlus, FiArrowRight } from "react-icons/fi";
+import LocalMark from "../images/map-marker.svg";
+import { Map, Marker, TileLayer, Popup } from "react-leaflet";
+import leaflet from "leaflet";
 import "leaflet/dist/leaflet.css";
-
 import "../styles/pages/orphanages-page.css";
+
+const mapIcon = leaflet.icon({
+  iconUrl: LocalMark,
+  iconSize: [58, 68],
+  iconAnchor: [29, 68],
+  popupAnchor: [170, 2],
+});
 
 function OrphanagesMap() {
   return (
@@ -29,15 +34,24 @@ function OrphanagesMap() {
         center={[-20.4744192, -55.7911925]}
         zoom={15}
         style={{ width: "100%", height: "100%" }}
-        zoomControl={false}
       >
-        {/* <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" /> */}
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: `${process.env.REACT_APP_GOOGLEMAPS}` }}
-          defaultCenter={{ lat: -20.4744192, lng: -55.7911925 }}
-          defaultZoom={15}
-          options={{ zoomControlOptions: { position: 1 } }}
-        ></GoogleMapReact>
+        <TileLayer
+          url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+        />
+
+        <Marker icon={mapIcon} position={[-20.4744192, -55.7911925]}>
+          <Popup
+            closeButton={false}
+            minWidth={240}
+            maxwidth={240}
+            className="map-popup"
+          >
+            ORFANATO
+            <Link to="/orphanage/1">
+              <FiArrowRight size={32} color="#fff" />
+            </Link>
+          </Popup>
+        </Marker>
       </Map>
       <Link to="" className="create-orphanage">
         <FiPlus size={32} color="#fff" />
