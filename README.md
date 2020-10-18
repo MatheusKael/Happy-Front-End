@@ -12,7 +12,7 @@
   <h3 align="center">Happy</h3>
 
   <p align="center">
-    Make the children happy
+    Make children happy
     <br />
     <a href="https://github.com/MatheusKael/Happy-Front-End"><strong>Explore the docs »</strong></a>
     <br />
